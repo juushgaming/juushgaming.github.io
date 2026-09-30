@@ -3,84 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>JuushGaming</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at top, #26382e 0%, #101916 45%, #090e0c 100%);
+            color: #e8e5d8;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.65;
+        }
+
+        header {
+            background: rgba(10, 22, 18, 0.94);
+            border-bottom: 2px solid #b78b32;
+            padding: 26px 24px;
+        }
+
+        .header-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand h1 {
+            margin: 0;
+            color: #f1cf70;
+            font-size: 2rem;
+        }
+
+        .brand p {
+            margin: 3px 0 0;
+            color: #aeb8ae;
+        }
+
+        nav a {
+            color: #ddd8c7;
+            text-decoration: none;
+            margin-left: 24px;
+        }
+
+        nav a:hover {
+            color: #f1cf70;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 70px 24px;
+        }
+
+        .intro {
+            max-width: 760px;
+            margin-bottom: 70px;
+        }
+
+        .intro h2 {
+            color: #f1cf70;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.15rem;
+        }
+
+        .game-card {
+            background: rgba(18, 35, 29, 0.94);
+            border: 1px solid #7f743f;
+            border-top: 4px solid #d2a744;
+            padding: 38px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .game-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .game-title h2 {
+            margin: 0;
+            color: #f1cf70;
+            font-size: 2rem;
+        }
+
+        .alpha {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid #d2a744;
+            color: #f1cf70;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            margin-top: 25px;
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .game-description {
+            max-width: 780px;
+        }
+
+        .alpha-note {
+            margin-top: 30px;
+            padding: 18px 20px;
+            background: rgba(211, 167, 68, 0.08);
+            border-left: 3px solid #d2a744;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .info-box {
+            background: rgba(20, 39, 32, 0.85);
+            border: 1px solid #536b55;
+            padding: 25px;
+        }
+
+        .info-box h3 {
+            color: #f1cf70;
+            margin-top: 0;
+        }
+
+        .info-box p {
+            color: #c5cbc5;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 18px;
+            color: #f1cf70;
+            border: 1px solid #8f8248;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #d2a744;
+            color: #101916;
+        }
+
+        footer {
+            max-width: 1050px;
+            margin: 60px auto 0;
+            padding: 25px 24px 40px;
+            border-top: 1px solid #39483e;
+            color: #78847b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+            .header-inner {
+                display: block;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin: 0 18px 0 0;
+            }
+
+            main {
+                padding-top: 40px;
+            }
+
+            .intro h2 {
+                font-size: 2rem;
+            }
+
+            .game-card {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>JuushGaming</h1>
-        <p>Games, documentation and other questionable projects.</p>
-    </header>
+<header>
+    <div class="header-inner">
+        <div class="brand">
+            <h1>JuushGaming</h1>
+            <p>Games, documentation and other questionable projects.</p>
+        </div>
 
-    <main>
-
-        <section>
-            <h2>Hi and welcome to JuushGaming!</h2>
-
-            <p>
-                After a long time playing games, I thought:
-                why not make one of my own?
-            </p>
-
-            <p>
-                And thus, <strong>Jones the Guinea Pig</strong> was born.
-            </p>
-        </section>
+        <nav>
+            <a href="#jones">Jones</a>
+            <a href="#documentation">Documentation</a>
+            <a href="#support">Support</a>
+        </nav>
+    </div>
+</header>
 
 
-        <section>
+<main>
+
+    <section class="intro">
+        <h2>Hi and welcome to JuushGaming!</h2>
+
+        <p>
+            After a long time playing games, I thought:
+            why not make one of my own?
+        </p>
+
+        <p>
+            And thus, <strong>Jones the Guinea Pig</strong> was born.
+        </p>
+    </section>
+
+
+    <section class="game-card" id="jones">
+
+        <div class="game-title">
             <h2>Jones the Guinea Pig</h2>
+            <span class="alpha">Early Alpha</span>
+        </div>
 
-            <p><strong>Flee from the siege and call for aid.</strong></p>
+        <p class="tagline">
+            Flee from the siege and call for aid.
+        </p>
 
+        <div class="game-description">
             <p>
                 Your way might be long, but you don't necessarily have to
                 travel alone. Along the way, you may find unlikely companions
-                who will help you fight up to three cats before moving on.
+                who will join you for a while, helping you fight up to three
+                cats before moving on.
             </p>
 
             <p>
                 Run, jump, crawl, fight and find your way through.
                 Survive whatever the cats throw at you and see how far you can get.
             </p>
+        </div>
 
-            <p>
-                <strong>Jones the Guinea Pig is currently in early alpha.</strong>
-                Things may change, things may break, and Jones may end up
-                somewhere he absolutely wasn't supposed to be.
-            </p>
-        </section>
-
-
-        <section>
-            <h2>Documentation & Wiki</h2>
-
-            <p>
-                This site is also the home for documentation, development notes
-                and the wiki for Jones the Guinea Pig.
-            </p>
-
-            <p>
-                More documentation will be added as development continues.
-            </p>
-        </section>
+        <div class="alpha-note">
+            <strong>Jones the Guinea Pig is currently in early alpha.</strong><br>
+            Things may change, things may break, and Jones may end up
+            somewhere he absolutely wasn't supposed to be.
+        </div>
 
 
-        <section>
-            <h2>Support</h2>
+        <div class="sections">
 
-            <p>
-                Found a bug? Jones probably did too.
-                Bug reports and known issues will be handled through GitHub.
-            </p>
-        </section>
+            <div class="info-box" id="documentation">
+                <h3>Documentation & Wiki</h3>
 
-    </main>
+                <p>
+                    This site is also the home for documentation,
+                    development notes and the wiki for Jones the Guinea Pig.
+                </p>
 
-    <footer>
-        <p>© 2026 JuushGaming</p>
-    </footer>
+                <p>
+                    More documentation will be added as development continues.
+                </p>
+            </div>
+
+
+            <div class="info-box" id="support">
+                <h3>Support & Bugs</h3>
+
+                <p>
+                    Found a bug? Jones probably did too.
+                </p>
+
+                <p>
+                    Bugs and other issues can be reported through GitHub.
+                </p>
+
+                <a class="button"
+                   href="https://github.com/juushgaming/juushgaming.github.io/issues">
+                    Report a Bug
+                </a>
+            </div>
+
+
+            <div class="info-box">
+                <h3>Privacy</h3>
+
+                <p>
+                    Privacy information for Jones the Guinea Pig
+                    and its mobile releases.
+                </p>
+
+                <a class="button" href="jones/privacy.html">
+                    Privacy Policy
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 JuushGaming
+</footer>
 
 </body>
 </html>
