@@ -1,0 +1,46 @@
+:root { color-scheme: dark; --bg:#101916; --paper:#182820; --line:#425649; --ink:#e8e5d8; --muted:#b2bdb2; --gold:#f1cf70; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:radial-gradient(ellipse at 90% 0%,#304733 0,transparent 45rem),var(--bg); color:var(--ink); font:16px/1.65 Arial,Helvetica,sans-serif; }
+a { color:var(--gold); text-underline-offset:4px; }
+a:hover { color:#fff1c5; }
+:focus-visible { outline:2px solid var(--gold); outline-offset:5px; }
+header,main,footer { max-width:1200px; margin:auto; padding-left:28px; padding-right:28px; }
+header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px; padding-top:24px; padding-bottom:24px; border-bottom:1px solid var(--line); }
+.brand { text-decoration:none; font-weight:bold; letter-spacing:.03em; }
+header nav { display:flex; gap:26px; }
+header nav a { font-size:.88rem; }
+.hero { padding:60px 0 36px; max-width:760px; }
+.eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:bold; }
+h1 { margin:12px 0 18px; font:clamp(2.2rem,5vw,4rem)/1.1 Georgia,serif; color:#fff0bf; letter-spacing:-.025em; }
+.intro { color:var(--muted); font-size:1.08rem; max-width:650px; }
+.alpha { font-size:.8rem; color:var(--muted); }
+.controls { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:24px 0; }
+.control-row { display:grid; grid-template-columns:minmax(0,1fr) 180px; gap:20px; }
+label { display:block; font-size:.78rem; font-weight:bold; color:var(--gold); letter-spacing:.04em; margin-bottom:7px; }
+input,select { font:inherit; background:#0d1712; border:1px solid #647864; color:var(--ink); padding:12px 14px; border-radius:4px; min-height:48px; width:100%; }
+input::placeholder { color:#a0b3a3; opacity:1; }
+.categories { display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
+button { font:inherit; cursor:pointer; min-height:42px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:4px; padding:8px 16px; }
+button:hover { border-color:var(--gold); }
+button[aria-pressed=true] { background:var(--gold); border-color:var(--gold); color:#18251c; }
+.results-line { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:22px 0 16px; color:var(--muted); font-size:.85rem; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:start; }
+.entry { border:1px solid var(--line); border-top:3px solid #75875d; background:linear-gradient(140deg,#1e3026,var(--paper)); border-radius:4px; scroll-margin-top:24px; overflow-wrap:anywhere; }
+.entry:target,.entry[open] { border-color:#aa9957; }
+summary { padding:23px; cursor:pointer; list-style:none; position:relative; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:'+'; position:absolute; right:22px; top:19px; color:var(--gold); font-size:1.3rem; }
+.entry[open] summary::after { content:'−'; }
+.category { display:block; text-transform:uppercase; letter-spacing:.1em; font-size:.66rem; color:#c5d3b3; padding-right:24px; }
+h2 { color:#f4df9b; font:1.42rem/1.2 Georgia,serif; margin:15px 0 11px; }
+.summary { display:block; color:var(--muted); font-size:.88rem; min-height:46px; }
+.details { padding:0 23px 24px; border-top:1px solid #354d3b; font-size:.93rem; }
+.details p { white-space:pre-line; }
+.permalink { display:inline-block; padding-top:7px; font-size:.8rem; }
+.empty { border:1px dashed var(--line); padding:40px 24px; grid-column:1/-1; color:var(--muted); }
+footer { margin-top:60px; padding-top:24px; padding-bottom:35px; border-top:1px solid var(--line); color:var(--muted); font-size:.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; }
+[hidden] { display:none !important; }
+@media(max-width:900px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:580px) { header,main,footer { padding-left:20px; padding-right:20px; } .hero { padding-top:38px; } .grid { grid-template-columns:1fr; } .control-row { grid-template-columns:1fr; gap:14px; } header nav { gap:18px; } .categories { gap:6px; } button { padding:7px 11px; font-size:.85rem; } .summary { min-height:0; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

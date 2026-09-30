@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Jones the Guinea Pig wiki: cats, companions, equipment, hidden crypts and the defenders of the meadow. Available in English, German and French.">
+  <title>The meadow field guide – Jones the Guinea Pig</title>
+  <link rel="stylesheet" href="wiki.css">
+  <script src="wiki-data.js" defer></script>
+  <script src="wiki.js" defer></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../index.html">← JuushGaming</a>
+  <nav aria-label="Links"><a href="https://github.com/juushgaming/juushgaming.github.io/issues">GitHub</a><a id="privacy-top" href="privacy.html">Privacy policy</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow" id="eyebrow">Jones the Guinea Pig · Chronicle</div>
+    <h1 id="title">The meadow field guide</h1>
+    <p class="intro" id="intro">Know your enemies. Meet your companions. Discover what lies beyond the siege.</p>
+    <p class="alpha" id="alpha">Early alpha · Game content and balancing may change.</p>
+  </section>
+  <section id="controls" class="controls" hidden>
+    <div class="control-row">
+      <div><label id="search-label" for="search">Search the chronicle</label><input id="search" type="search" placeholder="Character, attack, equipment…" autocomplete="off" aria-controls="entries"></div>
+      <div><label id="language-label" for="language">Language</label><select id="language"><option value="en" lang="en">English</option><option value="de" lang="de">Deutsch</option><option value="fr" lang="fr">Français</option></select></div>
+    </div>
+    <div id="categories" class="categories"></div>
+  </section>
+  <div class="results-line"><span id="count" role="status" aria-live="polite"><!-- ENTRY_COUNT --> entries</span><span id="read-hint">Choose an entry to read more</span></div>
+  <div id="entries" class="grid">
+<!-- GENERATED_ENTRIES -->
+  </div>
+</main>
+<footer><span>© 2026 JuushGaming · <span id="footer-note">A field guide for curious guinea pigs.</span></span><a id="privacy-bottom" href="privacy.html">Privacy policy</a></footer>
+</body>
+</html>
